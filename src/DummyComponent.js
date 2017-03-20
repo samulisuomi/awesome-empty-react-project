@@ -7,6 +7,7 @@ class DummyComponent extends React.PureComponent {
     return <div className="Dummy-Component">
       <RaisedButton
         label="Hello"
+        primary={ true }
         onTouchTap={ this.props.sayHello } />
     </div>
   }

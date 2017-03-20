@@ -1,9 +1,23 @@
 import React, { Component } from 'react';
+
+import './App.css';
+
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import { deepPurple800, deepPurple700, deepPurple600 } from 'material-ui/styles/colors';
+
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import AppBar from 'material-ui/AppBar';
+
 import DummyComponent from './DummyComponent';
-import './App.css';
+
+const muiTheme = getMuiTheme({
+  palette: {
+    primary1Color: deepPurple800,
+    primary2Color: deepPurple700,
+    primary3Color: deepPurple600,
+  }
+});
 
 class App extends Component {
   sayHello() {
@@ -12,7 +26,7 @@ class App extends Component {
 
   render() {
     return (
-      <MuiThemeProvider>
+      <MuiThemeProvider muiTheme={ muiTheme }>
         <Grid fluid className="App-Grid">
           <Row className="App-Bar-Row">
             <AppBar className="App-Bar"
@@ -28,6 +42,9 @@ class App extends Component {
                 <DummyComponent sayHello={ this.sayHello } />
               </Col>
             </Row>
+            <div>
+              <p>Testi Rown ulkopuolelta</p>
+            </div>
           </div>
         </Grid>
       </MuiThemeProvider>
