@@ -1,0 +1,7 @@
+.Dummy-Component {
+  background-color: #f5f5f5;
+}
+
+.Dummy-Component:hover {
+  background: none;
+}
