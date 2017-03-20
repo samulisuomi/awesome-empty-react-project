@@ -9,7 +9,9 @@ import { deepPurple800, deepPurple700, deepPurple600 } from 'material-ui/styles/
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import AppBar from 'material-ui/AppBar';
 
-import DummyComponent from './DummyComponent';
+import TitleList from './TitleList';
+
+import posts from './posts.json';
 
 const muiTheme = getMuiTheme({
   palette: {
@@ -39,12 +41,11 @@ class App extends Component {
                 <p>This is some text.</p>
               </Col>
               <Col className="start-md" xs={12} sm={12} md={6} lg={6}>
-                <DummyComponent sayHello={ this.sayHello } />
+                <TitleList
+                  posts={ posts }
+                  sort={ "ascending" } />
               </Col>
             </Row>
-            <div>
-              <p>Testi Rown ulkopuolelta</p>
-            </div>
           </div>
         </Grid>
       </MuiThemeProvider>
