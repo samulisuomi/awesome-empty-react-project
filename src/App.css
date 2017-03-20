@@ -1,5 +1,6 @@
-.App-Grid {
-  padding: 0;
+.App-Grid.container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .App-Container {
