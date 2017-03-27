@@ -6,12 +6,9 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import { deepPurple800, deepPurple700, deepPurple600 } from 'material-ui/styles/colors';
 
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Grid, Row } from 'react-flexbox-grid';
 import AppBar from 'material-ui/AppBar';
-
-import TitleList from './TitleList';
-
-import posts from './posts.json';
+import TextField from 'material-ui/TextField';
 
 const muiTheme = getMuiTheme({
   palette: {
@@ -37,14 +34,7 @@ class App extends Component {
           </Row>
           <div className="App-Container">
             <Row className="Row middle-xs">
-              <Col className="end-md" xs={12} sm={12} md={6} lg={6}>
-                <p>This is some text.</p>
-              </Col>
-              <Col className="start-md" xs={12} sm={12} md={6} lg={6}>
-                <TitleList
-                  posts={ posts }
-                  sort={ "ascending" } />
-              </Col>
+              <TextField id="Main-Input" autoFocus={true} fullWidth={true}/>
             </Row>
           </div>
         </Grid>
